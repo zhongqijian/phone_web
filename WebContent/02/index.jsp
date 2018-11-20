@@ -13,7 +13,7 @@
 
 <div data-role="page">
   <div data-role="header">
-    <h1>欢迎来到我的主页</h1>
+    <h1>欢迎来到我的主页1</h1>
   </div>
 
   <div data-role="main" class="ui-content">
