@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <html>
@@ -10,14 +12,27 @@
 <script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-
+<%
+	Date date = new Date();
+	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	String today = df.format(date);
+%>
 <div data-role="page">
   <div data-role="header">
     <h1>欢迎来到我的主页1</h1>
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>我现在是一个移动端开发者!!</p>
+    <table border="0">
+    	<tr>
+    		<td><%= today %></td>
+    	</tr>
+    	<tr>
+    		<td>yes</td>
+    		<td>no</td>
+    		<td>sorry</td>
+    	</tr>    	
+    </table>
   </div>
 
   <div data-role="footer">
