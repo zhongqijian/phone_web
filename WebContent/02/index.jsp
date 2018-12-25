@@ -14,18 +14,21 @@
 <body>
 <%
 	Date date = new Date();
-	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	String today = df.format(date);
 %>
+
+
 <div data-role="page">
   <div data-role="header">
-    <h1>欢迎来到我的主页1</h1>
+    <h1>田氏物流发货统计</h1>
   </div>
 
   <div data-role="main" class="ui-content">
-    <table border="0">
+    <table border="3">
     	<tr>
     		<td><%= today %></td>
+    		<td></td>
     	</tr>
     	<tr>
     		<td>yes</td>
