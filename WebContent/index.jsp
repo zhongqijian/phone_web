@@ -34,11 +34,11 @@
 	</script>
 	<%
 		Date date = new Date();
-		SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd hh:mm");
+		SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
 		String today = df.format(date);
 	%>
 
-
+	
 	<div data-role="page">
 		<div data-role="header">
 			<h1>车辆信息登记</h1>

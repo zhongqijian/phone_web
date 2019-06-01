@@ -45,7 +45,7 @@
 			String username = "root"; //数据库用户名
 			String password = "LEO@zhong1988"; //数据库用户密码
 			Connection conn = DriverManager.getConnection(url, username, password); //连接状态
-			String sql="insert into reg_car(car_name,car_Driver,car_phone)values(?,?,?)";
+			String sql="insert into reg_car(car_name,car_Driver,car_phone,reg_time)values(?,?,?,?)";
 			//获取PreparedStatement
 			PreparedStatement ps = conn.prepareStatement(sql);
 			//设置车牌号
@@ -54,6 +54,8 @@
 			ps.setString(2, car_info.getCar_Driver());
 			//设置司机电话
 			ps.setString(3, car_info.getCar_phone());
+			//设置登记时间
+			ps.setString(4, today_now);
 			//执行更新操作，返货受影响的行数
 			int row = ps.executeUpdate();
 			//判断更新是否成功
@@ -70,11 +72,6 @@
 			e.printStackTrace();
 		}
 	%>
-
-	
-	
-	
-	
 
 	<div data-role="page">
 		<div data-role="header">
