@@ -75,7 +75,7 @@
 			</div>
 		</form>
 		<div data-role="footer">
-			<h1>底部文本</h1>
+			<h1>合庆仓库车辆登记</h1>
 		</div>
 	</div>
 

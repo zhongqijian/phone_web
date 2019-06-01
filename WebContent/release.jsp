@@ -78,15 +78,13 @@
 
 	<div data-role="page">
 		<div data-role="header">
-			<h1>车辆信息登记</h1>
+			<h1>合庆仓库车辆信息入场登记</h1>
 		</div>
 		<table>
-			<tr><td>车牌号为：<%=car_name%></td></tr>
-			<tr><td>司机姓名为：<%=car_Driver%></td></tr>
-			<tr><td>司机电话为：<%=car_phone%></td></tr>		
+			<tr><td>你的车牌：<%=car_name%></td></tr>
+			<tr><td>你的姓名：<%=car_Driver%></td></tr>
+			<tr><td>你的电话：<%=car_phone%></td></tr>		
 		</table>
-		
-		
 		<div data-role="footer">
 			<h1><a href="index.jsp">返回主页面</a></h1>
 		</div>
