@@ -23,13 +23,11 @@
 				return false;
 			}
 			var re = /^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{5}$/;
-
 			var re = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/;
 			if(caradd.car_name.value.search(re) == -1) {
 				alert("你输入的车牌号有问题！！");
 				return false;
 			} 
-
 		}
 	</script>
 	<%
@@ -37,8 +35,6 @@
 		SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
 		String today = df.format(date);
 	%>
-
-	
 	<div data-role="page">
 		<div data-role="header">
 			<h1>车辆信息登记</h1>
@@ -70,7 +66,6 @@
 						<td align="center" colspan="2"><input type="submit"
 							value="开始排队"></td>
 					</tr>
-
 				</table>
 			</div>
 		</form>
@@ -78,6 +73,5 @@
 			<h1>合庆仓库车辆登记</h1>
 		</div>
 	</div>
-
 </body>
 </html>

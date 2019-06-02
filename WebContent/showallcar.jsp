@@ -7,6 +7,6 @@
 <title>总页面</title>
 </head>
 <body>
-	<a href="FinServlet">查看所有车辆</a>
+	<a href="FinServlet">排队信息管理</a>
 </body>
 </html>

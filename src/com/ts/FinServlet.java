@@ -1,5 +1,4 @@
 package com.ts;
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +12,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 public class FinServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	/**
@@ -55,7 +53,8 @@ public class FinServlet extends HttpServlet {
 				car.setReg_time(rs.getString("reg_time"));
 				//对预计装货时间进行复制
 				car.setLoad_time(rs.getString("load_time"));
-				
+				//显示备注信息
+				car.setRemarks(rs.getString("remarks"));
 				// 将car对象添加到集合中
 				list.add(car);
 			}
@@ -71,10 +70,6 @@ public class FinServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		//将请求转发到car_list.jsp
-		request.getRequestDispatcher("car_list.jsp").forward(request, response);
-		
-		
-		
+		request.getRequestDispatcher("car_list.jsp").forward(request, response);	
 	}
-
 }
