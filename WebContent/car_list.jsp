@@ -22,6 +22,10 @@
 				;
 			}
 		}
+		function del(){
+			return confirm("确认删除");
+		}
+		
 	</script>
 	<%
 		Date date = new Date();
@@ -70,7 +74,7 @@
 						size="18"> <input type="submit" value="修  改">
 				</form>
 			</td>
-			<td><a href="DeleteServlet?car_name=<%=car.getCar_name()%>">装运完成</td>
+			<td><a href="DeleteServlet?car_name=<%=car.getCar_name()%>" onclick="return del(),this">删除</td>
 		</tr>
 		<%
 			}
