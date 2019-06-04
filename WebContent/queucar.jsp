@@ -95,13 +95,7 @@
 		String password = "LEO@zhong1988"; //数据库用户密码
 		Connection conn = DriverManager.getConnection(url, username, password); //连接状态
 	%>
-
-
-
-
-
-
-	<h1 class="page-head">仓库排队备货情况</h1>
+	<h1 class="page-head">仓库排队情况</h1>
 	<div class="content">
 		<!-- 排队车辆顺序表 start -->
 		<div class="table-box">

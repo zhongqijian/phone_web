@@ -21,10 +21,5 @@
 			<td><font size="5" color="red"><a href="FinServlet">点击进入订单模块</a></font></td>
 		</tr>
 	</table>
-
-
-
-
-
 </body>
 </html>
