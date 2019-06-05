@@ -4,7 +4,7 @@
 <%@page import="com.ts.Car_info_ts"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="java.text.SimpleDateFormat"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,8 +32,7 @@
 		SimpleDateFormat dfload = new SimpleDateFormat("YYYY-MM-dd hh:mm");
 		String todayload = dfload.format(date);
 	%>
-	<table align="center" width="100%" border="1" height="180"
-		bordercolor="white" bgcolor="black" cellpadding="1" cellspacing="1">
+	<table align="center" width="100%" border="1"  bgcolor="black" cellpadding="1">
 		<tr bgcolor="white">
 			<td align="center" colspan="8">
 				<h2>所有车辆信息</h2>
@@ -74,7 +73,7 @@
 						size="18"> <input type="submit" value="修  改">
 				</form>
 			</td>
-			<td><a href="DeleteServlet?car_name=<%=car.getCar_name()%>" onclick="return del(),this">删除</td>
+			<td><a href="DeleteServlet?car_name=<%=car.getCar_name()%>" onclick="return del(),this">删除</a></td>
 		</tr>
 		<%
 			}

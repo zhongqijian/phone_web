@@ -22,7 +22,6 @@
 		<servlet-name>UpdateServlet</servlet-name>
 		<url-pattern>/UpdateServlet</url-pattern>
 	</servlet-mapping>
-	
 	<servlet>
 		<description></description>
 		<display-name>FinServlet</display-name>
@@ -44,6 +43,4 @@
 		<servlet-name>DeleteServlet</servlet-name>
 		<url-pattern>/DeleteServlet</url-pattern>
 	</servlet-mapping>
-
-
 </web-app>

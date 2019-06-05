@@ -33,7 +33,7 @@ public class FinServlet extends HttpServlet {
 			// 获取Statement
 			Statement stmt = conn.createStatement();
 			// 添加图书信息的SQL语句
-			String sql = "SELECT * FROM reg_car GROUP BY reg_time";
+			String sql = "SELECT * FROM reg_car ORDER BY reg_time";
 			// 执行查询
 			ResultSet rs = stmt.executeQuery(sql);
 			// 实例化List对象

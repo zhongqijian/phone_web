@@ -23,12 +23,11 @@ public class UpdateServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-		//int id = Integer.valueOf(request.getParameter("id"));
-		//int bookCount = Integer.valueOf(request.getParameter("bookCount"));
+		request.setCharacterEncoding("UTF-8");
 		String car_name=String.valueOf(request.getParameter("car_name"));
 		String load_time=String.valueOf(request.getParameter("load_time"));
+		//String car_name1=String.valueOf(request.getParameter(car_name).getBytes("iso-8859-1"),"uft"
+		//String str = new String(request.getParameter("参数名").getBytes("iso-8859-1"), "utf-8"); 
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); //// 驱动程序名
@@ -40,7 +39,6 @@ public class UpdateServlet extends HttpServlet {
 			//Statement stmt = conn.createStatement();
 			// 添加图书信息的SQL语句
 			String sql = "update reg_car set load_time=? where car_name=?";
-			//update 表名 set(字段1,字段2,字段3) = (select 数值1,数值2,数值3 from dual) where 条件
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, load_time);
 			ps.setString(2, car_name);
@@ -48,6 +46,7 @@ public class UpdateServlet extends HttpServlet {
 			ps.close();
 			conn.close();
 		}catch(Exception e) {
+			System.out.print("更新失败");
 			e.printStackTrace();
 		}
 		response.sendRedirect("FinServlet");
